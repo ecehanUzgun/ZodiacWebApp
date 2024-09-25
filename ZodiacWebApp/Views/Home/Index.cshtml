@@ -8,9 +8,14 @@
 <form method="post">
     <div>
         <label>Birth Date:</label>
-        <input type="date" class="form-control" id="BirthDate" name="BirthDate" value="@Model.Horoscope.Name" required />
+        <input type="date" class="form-control" id="BirthDate" name="BirthDate" value="@Model.BirthDate.ToString("yyyy-MM-dd")" required />
         <button type="submit" class="btn btn-primary mt-3">Submit</button>
     </div>
 </form>
+
+@if (Model.Horoscope != null)
+{
+    <h2>Your Horoscope: @Model.Horoscope.Name</h2>
+}
 
 

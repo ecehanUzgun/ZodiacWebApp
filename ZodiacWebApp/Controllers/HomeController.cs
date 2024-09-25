@@ -26,7 +26,8 @@ namespace ZodiacWebApp.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            return View();
+            var userProfile = new UserProfile();
+            return View(userProfile);
         }
 
         [HttpPost]
@@ -42,7 +43,8 @@ namespace ZodiacWebApp.Controllers
             {
                 if ((userProfile.BirthDate.Month == h.StartMonth && userProfile.BirthDate.Day >= h.StartDay) || (userProfile.BirthDate.Month == h.EndMonth && userProfile.BirthDate.Day <= h.EndDay))
                 {
-                    userProfile.Horoscope.Name = h.Name; //System.NullReferenceException: 'Object reference not set to an instance of an object.'
+                    userProfile.HoroscopeId = h.ID;
+                    userProfile.Horoscope = h;
                     break;
                 }
             }
