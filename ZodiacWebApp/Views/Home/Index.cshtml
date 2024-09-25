@@ -1,0 +1,14 @@
+﻿@model ZodiacWebApp.Models.UserProfile
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Anasayfa</h1>
+
+<form method="post">
+    <div>
+        <label>Birth Date:</label>
+        <input type="date" class="form-control" id="BirthDate" name="BirthDate" value="" required />
+        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+    </div>
+</form>
