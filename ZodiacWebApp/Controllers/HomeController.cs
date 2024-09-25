@@ -32,14 +32,21 @@ namespace ZodiacWebApp.Controllers
         [HttpPost]
         public IActionResult Index(UserProfile userProfile)
         {
+            //NullReferenceException hatasını önlemek için
+            if (userProfile.Horoscope == null)
+            {
+                userProfile.Horoscope = new Horoscope();
+            }
+
             foreach (var h in horoscopes)
             {
                 if ((userProfile.BirthDate.Month == h.StartMonth && userProfile.BirthDate.Day >= h.StartDay) || (userProfile.BirthDate.Month == h.EndMonth && userProfile.BirthDate.Day <= h.EndDay))
                 {
-                    return View(h.Name);
+                    userProfile.Horoscope.Name = h.Name; //System.NullReferenceException: 'Object reference not set to an instance of an object.'
+                    break;
                 }
             }
-            return RedirectToAction("Index");
+            return View(userProfile);
         }
     }
 }
