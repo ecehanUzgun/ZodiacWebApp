@@ -1,0 +1,15 @@
+﻿@model List<ZodiacWebApp.Models.UserProfile>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Register</h1>
+
+<ul>
+    @foreach (var userProfile in Model)
+    {
+        <li>@userProfile.Firstname @userProfile.Firstname @userProfile.Lastname @userProfile.BirthDate @userProfile.Horoscope @userProfile.Gender @userProfile.PhoneNumber </li>
+    }
+</ul>
+<hr />
