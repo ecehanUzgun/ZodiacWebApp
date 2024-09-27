@@ -16,5 +16,19 @@ namespace ZodiacWebApp.Controllers
         }
 
         //UserProfile CRUD 
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(UserProfile userProfile)
+        {
+            userProfile.ID = userProfiles.Count+1;
+            userProfiles.Add(userProfile);
+            return RedirectToAction("Index");
+        }
+
+        
     }
 }

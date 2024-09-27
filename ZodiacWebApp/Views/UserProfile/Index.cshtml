@@ -7,9 +7,9 @@
 <h1>Register</h1>
 
 <ul>
-    @foreach (var userProfile in Model)
+    @foreach (var userProfile in Model) //System Null Reference Exception
     {
-        <li>@userProfile.Firstname @userProfile.Lastname @userProfile.BirthDate @userProfile.Horoscope @userProfile.Gender @userProfile.PhoneNumber @userProfile.User.Email</li>
+        <li>@userProfile.Firstname @userProfile.Lastname </li>
     }
 </ul>
 <hr />

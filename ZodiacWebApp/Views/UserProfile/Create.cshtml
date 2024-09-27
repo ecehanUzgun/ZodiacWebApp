@@ -6,21 +6,20 @@
 
 <form method="post">
     <div class="form-group">
-        <label for="exampleInputEmail1">Name</label>
-        <input type="text" name="Firstname" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        <label for="exampleInputName">Name</label>
+        <input type="text" name="Firstname" class="form-control" id="Firstname" aria-describedby="nameHelp" placeholder="enter your name">
     </div>
     <div class="form-group">
-        <label for="exampleInputPassword1">Surname</label>
-        <input type="text" name="Lastname" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        <label for="exampleInputSurname">Surname</label>
+        <input type="text" name="Lastname" class="form-control" id="exampleInputSurname" placeholder="enter your surname">
     </div>
     <div class="form-group">
-        <label for="exampleInputPassword1">Phone Number</label>
-        <input type="text" name="Lastname" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        <label for="exampleInputPhone">Phone Number</label>
+        <input type="tel" name="PhoneNumber" class="form-control" id="exampleInputPhone" placeholder="(111) 111-11-11" pattern="\([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}">
     </div>
     <div class="form-group">
-        <label for="exampleInputPassword1">Birth Date</label>
-        <input type="text" name="Lastname" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        <label for="exampleInputDate">Birth Date</label>
+        <input type="date" name="BirthDate" class="form-control" id="exampleInputDate" placeholder="enter your birth day">
     </div>
     <div class="form-group">
         <label for="inputGender">Gender</label>
@@ -29,6 +28,18 @@
             <option>Male</option>
             <option>Female</option>
         </select>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputMail">Email</label>
+        <input type="email" name="Email" class="form-control" id="exampleInputEmail" placeholder="enter your email">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword">Password</label>
+        <input type="password" name="Password" class="form-control" id="exampleInputPassword" placeholder="enter your password">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword">Password Again</label>
+        <input type="password" name="ConfirmPassword" class="form-control" id="exampleInputPassword" placeholder="enter your password again">
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
