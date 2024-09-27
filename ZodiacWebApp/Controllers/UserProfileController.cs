@@ -29,6 +29,19 @@ namespace ZodiacWebApp.Controllers
             return RedirectToAction("Index");
         }
 
-        
+        public IActionResult GetUserProfileById(int id) 
+        { 
+            UserProfile userProfile = userProfiles.FirstOrDefault(x => x.ID == id);
+            if (userProfile != null)
+            {
+                return View(userProfile);
+            }
+            return RedirectToAction("Index"); 
+        }
+
+        public IActionResult Update(int id)
+        { 
+            return View(); 
+        }
     }
 }
