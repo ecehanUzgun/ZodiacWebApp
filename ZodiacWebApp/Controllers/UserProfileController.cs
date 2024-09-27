@@ -15,6 +15,6 @@ namespace ZodiacWebApp.Controllers
             return View(userProfiles);
         }
 
-        
+        //UserProfile CRUD 
     }
 }
